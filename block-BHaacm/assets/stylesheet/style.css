@@ -1,0 +1,348 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom css */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Source Sans Pro", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.brand {
+  z-index: 9;
+}
+
+a:hover {
+  background-color: #06d444;
+  color: rgb(3, 3, 3);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.iteam-center {
+  align-items: center;
+}
+.flex-48 {
+  flex: 0 1 48%;
+}
+.flex-30 {
+  flex: 0 1 30%;
+}
+.toggle {
+  display: none;
+}
+
+/* header */
+
+#toggle:checked ~ .nav {
+  display: inline-block;
+}
+
+.bar {
+  position: relative;
+  z-index: 5;
+}
+
+#toggle:checked ~ .bar i::before {
+  content: "\f00d";
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0.8);
+  }
+
+nav .ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  nav .ul li {
+    margin: 20px;
+  }
+
+.nav,
+.not-see {
+  display: none;
+}
+.header {
+  position: relative;
+}
+
+header {
+  background-color: #222946;
+  color: white;
+  padding: 10px 64px;
+}
+.space-bt {
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  background-color: #222946;
+  color: white;
+  padding: 32px 64px;
+}
+.menu {
+  margin-right: 20px;
+}
+.menu a {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+.active a {
+  color: #45b768;
+}
+footer a {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 10px;
+}
+footer small {
+  font-size: 24px;
+  font-weight: 600;
+}
+.col {
+  padding: 20px;
+}
+.col img {
+  width: 100%;
+}
+.pencil img {
+  width: 100%;
+}
+.artical-a {
+  padding: 64px;
+  background-color: #e9ecfc;
+}
+h1 {
+  font-size: 32px;
+  color: #222946;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "PT Serif", serif;
+}
+h2 {
+  margin-top: 40px;
+  text-align: center;
+  font-family: "PT Serif", serif;
+  font-size: 32px;
+  color: #222946;
+  font-weight: 600;
+}
+.btn {
+  padding: 12px 25px;
+  color: white;
+  font-size: 20px;
+  background-color: #45b768;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: inline-block;
+}
+.btn-mini {
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  background-color: #45b768;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: inline-block;
+}
+h3 {
+  font-size: 20px;
+  color: #222946;
+  font-weight: 600;
+}
+p {
+  font-size: 16px;
+  color: #707795;
+  font-weight: 200;
+}
+.artical-2 {
+  margin: 32px 64px;
+}
+@media screen and (max-width: 768px) {
+  .flex-30,
+  .flex-48 {
+    /* max-width: 768px; */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .space-bt {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0.8);
+  }
+
+  nav .ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  nav .ul li {
+    margin: 20px;
+  }
+}
